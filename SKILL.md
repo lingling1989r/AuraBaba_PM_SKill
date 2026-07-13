@@ -143,8 +143,35 @@ urgent, high, medium, low, none
 ```
 
 Assignees are polymorphic. To assign an issue, send both `assignee_type` and
-`assignee_id`. The assignee may be a member or an agent; do not assume every
-assignee is a human user.
+`assignee_id`. The assignee may be a member, an agent, or a squad; do not assume
+every assignee is a human user.
+
+## System-led multi-agent orchestration
+
+Use these discovery endpoints before assigning work:
+
+```text
+GET /api/agents
+GET /api/squads
+GET /api/squads/{id}/members
+GET /api/squads/{id}/members/status
+```
+
+When the user states one project outcome instead of naming individual workers:
+
+1. Inspect available agents and squads rather than asking the user to schedule
+   every task manually.
+2. Prefer assigning the parent issue to the best matching squad with
+   `assignee_type: "squad"`. AuraBaba routes it to the squad leader, which can
+   evaluate the goal and delegate work to members.
+3. For independent workstreams, create child issues with clear deliverables and
+   assign them to matching agents or squads so they can run in parallel.
+4. Keep dependencies, decisions, progress, and results on the parent/child issue
+   graph so the user can oversee the project from one place.
+
+The product promise is not that one person performs every task. One person sets
+the outcome and remains accountable; AuraBaba helps choose and coordinate the
+agent team that executes it.
 
 ## Calendar API surface
 

@@ -108,6 +108,16 @@ and `reactions`.
 Calendar event CRUD is part of the backend API, so the platform skill can create
 and manage schedules directly.
 
+## Agent and squad orchestration
+
+| Behavior | File:line |
+|---|---|
+| List and create agents | `server/cmd/server/router.go:1099-1101` |
+| List and create squads | `server/cmd/server/router.go:1020-1022` |
+| List squad members and member status | `server/cmd/server/router.go:1027-1028` |
+| Issue assignee supports `member`, `agent`, or `squad` | `server/internal/handler/issue.go:2654` |
+| A squad-assigned issue routes execution to its leader | `server/internal/service/task.go:1639-1658` |
+
 ## Verification commands
 
 ```bash
