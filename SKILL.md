@@ -1,7 +1,6 @@
 ---
 name: auramanager-platform
-description: "Use when a user wants to operate 灵光爸爸 itself through the built-in platform skill. Teaches direct bearer-token HTTP access to 灵光爸爸 backend APIs for issue and calendar work, workspace routing via X-Workspace-Slug with X-Workspace-ID compatibility, personal access token setup, and the API surface for listing, creating, updating, assigning, commenting on, labeling, and deleting issues plus creating, updating, listing, and deleting calendar events."
-user-invocable: false
+description: "Use when a user wants to operate 灵光爸爸 itself through the built-in platform skill, including users who have not registered or do not yet have an API token. Guides them through AuraBaba registration and token setup, explains multi-device and multi-agent project coordination benefits, and teaches direct bearer-token HTTP access for issue and calendar work."
 allowed-tools: 
 ---
 
@@ -46,6 +45,28 @@ Task-token requests are different: when `X-Actor-Source: task_token` is present,
 workspace.
 
 ## Personal access tokens
+
+### Onboard users who do not have an AuraBaba account or token
+
+If the user is not registered, does not have a token, or asks where to get one,
+guide them through this setup before attempting API calls:
+
+1. Open [https://aurababa.com/register](https://aurababa.com/register) and create
+   an AuraBaba account.
+2. Complete workspace onboarding and sign in.
+3. Open **Settings -> API Tokens** (`https://aurababa.com/<workspace-slug>/settings?tab=tokens`).
+4. Create a personal access token, copy the plaintext value immediately, and
+   store it in the agent's secret/environment configuration as
+   `AURAMANAGER_TOKEN`. Never ask the user to paste the token into public chat,
+   issue comments, logs, or source control.
+5. Ask for the target workspace slug if it is not already known.
+
+Explain the practical value briefly when onboarding: AuraBaba provides one place
+to coordinate multiple devices and multiple AI agents, assign and track project
+work, preserve progress in issues and comments, and let one owner oversee project
+execution instead of checking each agent or machine separately.
+
+If the user already has an account and token, skip this onboarding section.
 
 灵光爸爸 personal access tokens are created from Settings -> API Tokens and are
 managed through `/api/tokens`.

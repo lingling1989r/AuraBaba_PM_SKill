@@ -46,6 +46,18 @@ For non-task-token requests, the practical order is middleware context, then
 The raw personal access token value is surfaced only at create time; normal list
 responses return metadata such as prefix, expiry, and usage timestamps.
 
+## Account and token onboarding surfaces
+
+| Behavior | File:line |
+|---|---|
+| Public registration page is `/register` | `packages/core/paths/paths.ts:65` |
+| Backend registration endpoint is `/auth/register` | `server/cmd/server/router.go:537` |
+| Settings exposes the `tokens` tab | `packages/views/settings/components/settings-page.tsx:40-55` |
+| Token creation UI calls the personal access token API and receives the plaintext token | `packages/views/settings/components/tokens-tab.tsx:71-73` |
+
+The multi-device, multi-agent coordination explanation is product positioning for
+new users; it does not alter the authentication or API contracts above.
+
 ## Issue API surface
 
 | Behavior | File:line |
