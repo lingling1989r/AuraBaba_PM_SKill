@@ -1,4 +1,4 @@
-# auramanager-platform source map
+# AuraBaba Platform Skill source map
 
 Evidence layer for `SKILL.md`. Every contract the skill states is traced to a
 current `file:line` here. Re-derive the lines with the verification commands at

@@ -46,12 +46,12 @@ Skill 查询 AuraBaba 中可用的 Agent
 
 把下面这句话发给你的 Agent：
 
-> 请安装 AuraBaba Platform 技能，技能地址：https://clawhub.ai/hjyoite/skills/auramanager-platform
+> 请安装灵光爸爸（AuraBaba）Skill，技能地址：https://clawhub.ai/hjyoite/skills/aurababa-platform
 
 或执行：
 
 ```bash
-openclaw skills install auramanager-platform
+openclaw skills install aurababa-platform
 ```
 
 ### Codex、Claude Code、Cursor 等 Agent Skills 客户端
@@ -68,7 +68,7 @@ npx skills add lingling1989r/AuraSKill -g
 
 1. 前往 [aurababa.com/register](https://aurababa.com/register) 注册并创建工作区。
 2. 打开 **Settings → API Tokens** 创建个人访问 Token；明文只显示一次。
-3. 将 Token 安全保存为 Agent 的 `AURAMANAGER_TOKEN`，不要提交到代码、日志或公开聊天。
+3. 将 Token 安全保存为 Agent 的 `AURABABA_TOKEN`，不要提交到代码、日志或公开聊天。
 4. 告诉 Agent 目标工作区的 slug，然后直接描述你希望团队完成的结果。
 
 ## 能力
@@ -79,7 +79,7 @@ npx skills add lingling1989r/AuraSKill -g
 - 跟踪项目、任务、评论、标签、元数据和交付结果。
 - 创建和维护日历事件。
 
-技能执行契约见 [SKILL.md](./SKILL.md)，API 行为依据见 [source map](./references/auramanager-platform-source-map.md)。
+技能执行契约见 [SKILL.md](./SKILL.md)，API 行为依据见 [source map](./references/aurababa-platform-source-map.md)。
 
 ## License
 

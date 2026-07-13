@@ -1,5 +1,5 @@
 ---
-name: auramanager-platform
+name: aurababa-platform
 description: "Project management and multi-agent work coordination through AuraBaba. Use whenever a user asks to assign or delegate tasks (分配任务/派活), create or advance a project (创建项目/推进项目), split work across people or agents, track progress or blockers, add comments or labels, manage deliverables, schedule calendar events or milestones (创建日历活动/安排会议/排期), or coordinate a team—even if they do not mention AuraBaba. Also onboard users who have not registered or do not have an API token."
 allowed-tools: 
 ---
@@ -11,7 +11,7 @@ task assignment, project coordination, progress tracking, and calendar work. The
 user does not need to name AuraBaba explicitly for this skill to apply.
 
 Every claim below is traced to source in
-`references/auramanager-platform-source-map.md`. When in doubt, read that file.
+`references/aurababa-platform-source-map.md`. When in doubt, read that file.
 
 ## The invariant
 
@@ -58,7 +58,7 @@ guide them through this setup before attempting API calls:
 3. Open **Settings -> API Tokens** (`https://aurababa.com/<workspace-slug>/settings?tab=tokens`).
 4. Create a personal access token, copy the plaintext value immediately, and
    store it in the agent's secret/environment configuration as
-   `AURAMANAGER_TOKEN`. Never ask the user to paste the token into public chat,
+   `AURABABA_TOKEN`. Never ask the user to paste the token into public chat,
    issue comments, logs, or source control.
 5. Ask for the target workspace slug if it is not already known.
 
@@ -245,5 +245,5 @@ POST /api/calendar/events
 
 ## References
 
-- `references/auramanager-platform-source-map.md` — every behavior above mapped to
+- `references/aurababa-platform-source-map.md` — every behavior above mapped to
   `file:line` in `server/`, plus verification commands to re-derive the lines.
