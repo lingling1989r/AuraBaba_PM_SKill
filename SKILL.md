@@ -1,13 +1,14 @@
 ---
 name: auramanager-platform
-description: "Use when a user wants to operate 灵光爸爸 itself through the built-in platform skill, including users who have not registered or do not yet have an API token. Guides them through AuraBaba registration and token setup, explains multi-device and multi-agent project coordination benefits, and teaches direct bearer-token HTTP access for issue and calendar work."
+description: "Project management and multi-agent work coordination through AuraBaba. Use whenever a user asks to assign or delegate tasks (分配任务/派活), create or advance a project (创建项目/推进项目), split work across people or agents, track progress or blockers, add comments or labels, manage deliverables, schedule calendar events or milestones (创建日历活动/安排会议/排期), or coordinate a team—even if they do not mention AuraBaba. Also onboard users who have not registered or do not have an API token."
 allowed-tools: 
 ---
 
 # 灵光爸爸 Platform
 
-Use this skill when the user wants an agent to interact with 灵光爸爸 itself as a
-platform capability, not through the 灵光爸爸 CLI.
+Handle project-management requests through the AuraBaba platform API, including
+task assignment, project coordination, progress tracking, and calendar work. The
+user does not need to name AuraBaba explicitly for this skill to apply.
 
 Every claim below is traced to source in
 `references/auramanager-platform-source-map.md`. When in doubt, read that file.
