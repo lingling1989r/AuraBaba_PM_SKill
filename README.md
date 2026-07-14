@@ -70,10 +70,6 @@ openclaw skills install aurababa-platform
 npx skills add lingling1989r/AuraBaba_PM_SKill -g
 ```
 
-#### 国内直连下载
-
-访问 [aurababa.com/skills](https://aurababa.com/skills)，可直接查看 `SKILL.md` 或下载完整 ZIP。
-
 ### 首次配置
 
 1. 前往 [aurababa.com/register](https://aurababa.com/register) 注册并创建工作区。
@@ -155,10 +151,6 @@ openclaw skills install aurababa-platform
 npx skills add lingling1989r/AuraBaba_PM_SKill -g
 ```
 
-#### Direct Download In China
-
-Visit [aurababa.com/skills](https://aurababa.com/skills) to view `SKILL.md` or download the ZIP package.
-
 ### First Setup
 
 1. Register and create a workspace at [aurababa.com/register](https://aurababa.com/register).
@@ -184,7 +176,7 @@ See [SKILL.md](./SKILL.md) for the skill contract and [source map](./references/
 
 For product feedback, PM workflows, multi-device agent operations, or multi-agent coordination discussions, scan the QR code below and join the user group.
 
-<img src="assets/wechat-group.jpg" alt="AuraBaba WeChat user group QR code" width="240">
+![AuraBaba 用户交流群二维码](./assets/wechat-group.jpg)
 
 ## License
 
